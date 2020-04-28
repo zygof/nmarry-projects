@@ -1,0 +1,32 @@
+<!-- Développeur : Nicolas MARRY -->
+<?xml version="1.0" encoding="UTF-8"?>
+
+<projets>
+	<projet>
+		<libelle></libelle>
+		<affectation></affectation>
+		<format></format>
+		<langages>
+			<langage>
+				<libelle></libelle>
+				<logo></logo>
+			</langage>
+		</langages>
+		<statut></statut>
+		<details>
+			<detail>
+				<titre></titre>
+				<texte></texte>
+				<photo></photo>
+			</detail>
+		</details>
+		<aperçus>
+			<aperçu>
+				<titre></titre>
+				<resumé></resumé>
+				<photo></photo>
+			</aperçu>
+		</aperçus>
+	</projet>
+	
+</projets>

@@ -1,0 +1,41 @@
+<!-- Développeur : Nicolas MARRY -->
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formations>
+	<formation>
+		<annee_debut>2018</annee_debut>
+		<annee_fin>2020</annee_fin>
+		<niveau>BAC + 4</niveau>
+		<diplome>CONCEPTEUR DÉVELOPPEUR D’APPLICATION</diplome>
+		<option></option>
+		<lieu>Expernet Réunion – Le Port</lieu>
+	</formation>
+	
+	<formation>
+		<annee_debut>2018</annee_debut>
+		<annee_fin></annee_fin>
+		<niveau></niveau>
+		<diplome>DIPLÔME D’ENTRAINEUR DE BADMINTON</diplome>
+		<option></option>
+		<lieu>Maison des sports CREPS – St Denis</lieu>
+	</formation>
+	
+	<formation>
+		<annee_debut>2016</annee_debut>
+		<annee_fin>2018</annee_fin>
+		<niveau>BAC + 2</niveau>
+		<diplome>BTS SYSTÈME NUMÉRIQUE</diplome>
+		<option>Informatique et Réseau</option>
+		<lieu>Lycée Roland GARROS – Le TAMPON</lieu>
+	</formation>
+	
+	<formation>
+		<annee_debut>2015</annee_debut>
+		<annee_fin></annee_fin>
+		<niveau></niveau>
+		<diplome>BACCALAURÉAT SCIENTIFIQUE : SCIENCE DE L’INGÉNIEUR</diplome>
+		<option>Spécialité Informatique et Sciences du Numérique</option>
+		<lieu>Lycée Georges BRASSENS – St Denis</lieu>
+	</formation>
+	
+</formations>

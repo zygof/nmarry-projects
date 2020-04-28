@@ -1,0 +1,67 @@
+page accueil
+[
+	présentation
+	phrase d'accueil
+	mon parcours [Une phrase pour ynov]
+	experiences professionnelles
+	mes projets [1 page par projet]
+	Centre d'intérêt
+]
+footer :
+téléphone, cv en dl, linkedin, email, instagram, facebook
+
+
+*Présentation{
+	Photo - 
+	Nicolas MARRY . 22 ans,
+	Concepteur développeur d'application
+	FRANCE, île de la Réunion
+}
+
+*Phrase d'accueil{
+Se reveiller chaque matin pour développer mon sens artistique est ce qui me rend le plus en joie. 
+Voir la satisfaction des clients et le résultat d'un travail bien fait est d'autant plus fastisfaisant.
+Un de mes futur bonheurs serai de développer mon île "La Réunion"[https://www.reunion.fr/], d'une tout autre manière (smiley relaxé x2) ...
+
+}
+
+*Mon parcours{
+2018/2020 – BAC + 4 : CONCEPTEUR DÉVELOPPEUR D’APPLICATION
+•	Expernet Réunion – Le Port
+2018 – DIPLÔME D’ENTRAINEUR DE BADMINTON
+•	Maison des sports CREPS – St Denis
+2016/2018 – BAC + 2 : BTS SYSTÈME NUMÉRIQUE 
+Options informatique et réseau
+•	Lycée Roland GARROS – Le TAMPON
+2015 – BACCALAURÉAT SCIENTIFIQUE : SCIENCE DE L’INGÉNIEUR       spécialité informatique et sciences du numérique
+•	Lycée Georges BRASSENS – St Denis
+
+}
+
+*Experiences professionnelle{
+2018/2020 – DÉVELOPPEUR INFORMATIQUE, LOCATEX - St Pierre
+Conception et développement d’application desktop/site web intranet :
+•	Site web de consultation des statistiques de magasin
+•	Application desktop d’inventaire matériel pour recyclage
+•	Site web intranet de gestion des stocks matériels
+•	Divers tâches d’administration réseau, support téléphonique
+2017 – STAGIAIRE, SIDELEC RÉUNION - St Pierre
+Administration réseau :
+•	Développement d’un serveur de monitoring (Centreon)
+
+}
+
+*Mes projets{
+
+}
+
+Centre d'intérêt{
+Sport :
+Évasion et esprit d’équipe, voilà ce qui me fascine dans le sport. Je pratique plus particulièrement le badminton depuis mon jeune âge.
+Je participe régulièrement des compétitions de badminton le week end (joueur attanquant de double plutôt agressif {smiley tirement de langue}): [https://www.myffbad.fr/joueur/06786624]
+
+Beatmaking :
+Passionné par la musique depuis l’enfance, je réalise des productions musicales de tout genre. 
+Trap, Hip Hop RNB, KOMPA, toute mes compositions sont à retrouvés sur ma chaîne (logo youtube)[www.youtube.com/channel/UCNWxVewsjH97hXFFIYHlJJA]
+
+}
