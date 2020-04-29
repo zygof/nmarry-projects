@@ -32,7 +32,7 @@
     </v-card-title>
     <v-card-text>
       <div>{{app.description}}</div>
-      <div class="title mt-2">Technologies utilisés</div>
+      <div class="title mt-2">Technologies utilisées</div>
       <v-layout>
         <template v-for="(tech, i) in app.technologies">
           <v-flex xs3 :key="i">

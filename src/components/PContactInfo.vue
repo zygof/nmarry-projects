@@ -1,9 +1,9 @@
 <template>
-  <v-list-item>
+  <v-list-item :href="contact.link" target="_blank">
     <v-list-item-icon class="pa-0 mr-2">
-      <v-btn icon :href="contact.link" target="_blank">
+      <span icon>
         <v-icon>{{contact.icon}}</v-icon>
-      </v-btn>
+      </span>
     </v-list-item-icon>
     <v-list-item-content>
       <v-list-item-title>{{contact.value}}</v-list-item-title>
