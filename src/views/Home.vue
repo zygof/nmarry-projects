@@ -94,7 +94,7 @@ export default {
         {
           name: "MySeance",
           statut: "EN COURS",
-          logo: "food-vision-logo.png",
+          logo: "sport.svg",
           platforms: [
             {
               name: "apple",
@@ -108,7 +108,7 @@ export default {
             }
           ],
           description:
-            "Gestion de pointage d'adhérent de club de sport. Intégration d'un système de statistique du trafic de présence.",
+            "Gestion du trafic d'entrée d'adhérent de club de sport. Intégration d'un système de statistique.",
           technologies: [
             {
               name: "Swift",
