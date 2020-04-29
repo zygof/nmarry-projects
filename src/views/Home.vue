@@ -13,7 +13,7 @@
             <v-col cols="12">
               <div class="display-2 font-weight-bold">Nicolas MARRY, 
                 {{  Math.abs(new Date(Date.now()- new Date(1997, 7, 31).getTime()).getUTCFullYear() - 1970) }} ans 
-                <img src="france.ico" height="25px">
+                <img src="../assets/france.jpg" height="25px">
               </div>
               <div class="headline">Concepteur développeur d'application</div>
             </v-col>
