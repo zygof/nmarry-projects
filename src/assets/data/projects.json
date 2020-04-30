@@ -156,7 +156,7 @@
 
     {
       "name": "MyStock",
-      "statut": "TEST",
+      "statut": "EN TEST",
       "logo": "projet-default.png",
       "type":"Professionnel",
       "platforms": [
@@ -396,7 +396,7 @@
 
     {
       "name": "CaddyRUN",
-      "statut": "FINI",
+      "statut": "TERMINÉE",
       "logo": "projet-default.png",
       "type":"Ecole (Lycée George Brassens)",
       "platforms": [
