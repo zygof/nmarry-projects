@@ -11,11 +11,11 @@
         <v-container>
           <v-row align="center" justify="center" class="white--text">
             <v-col cols="12">
-              <div class="display-2 font-weight-bold">Nicolas MARRY, 
-                {{  Math.abs(new Date(Date.now()- new Date(1997, 7, 31).getTime()).getUTCFullYear() - 1970) }} ans 
-                <img src="../assets/france.jpg" height="25px">
+              <div class="display-2 font-weight-bold">{{profil.firstname}} {{profil.name}}, 
+                {{  Math.abs(new Date(Date.now()- new Date(profil.birthday_y, profil.birthday_m, profil.birthday_d).getTime()).getUTCFullYear() - 1970) }} ans 
+                <img src='../assets/france.jpg' height="25px">
               </div>
-              <div class="headline">Concepteur développeur d'application</div>
+              <div class="headline">{{profil.job}}</div>
             </v-col>
           </v-row>
         </v-container>
@@ -27,7 +27,7 @@
           <div class="display-1 font-weight-bold" id="about">À propos de moi</div>
         </v-flex>
         <v-flex xs12 mt-5>
-          <div class="body-1">{{aboutText}}</div>
+          <div class="body-1">{{profil.aboutText}}</div>
           <div
             class="body-1 mt-3"
           > Mon rêve?? Développer mon île La Réunion d'une toute autre manière... 😌😌</div>
@@ -39,7 +39,7 @@
         </v-flex>
         <v-flex xs12 class="mt-5">
           <v-layout wrap>
-            <template v-for="(app, i) in apps">
+            <template v-for="(app, i) in projects.data">
               <v-flex :key="i" xs12 sm6 md4>
                 <p-portfolio-app :app="app" />
               </v-flex>
@@ -78,145 +78,28 @@
 // import HelloWorld from "@/components/HelloWorld.vue";
 import PPortfolioApp from "@/components/PPortfolioApp.vue";
 import PContactInfo from "@/components/PContactInfo.vue";
+import json_profile from "../assets/data/profile.json";
+import json_projects from "../assets/data/projects.json";
+import json_experiences from "../assets/data/experiences.json";
+import json_training from "../assets/data/training.json";
+import json_hobbies from "../assets/data/hobbies.json";
+import json_links from "../assets/data/links.json";
 
 export default {
   name: "home",
   components: {
-    // HelloWorld,
     PPortfolioApp,
     PContactInfo
   },
   data() {
     return {
-      aboutText:
-        "Se réveiller chaque matin pour développer mon sens artistique est ce qui me rend le plus en joie. Voir la satisfaction des clients et le résultat d'un travail bien fait est d'autant plus gratifiant.",
-      apps: [
-        {
-          name: "MySeance",
-          statut: "en cours",
-          logo: "sport.svg",
-          platforms: [
-            {
-              name: "Android",
-              icon: "mdi-android",
-              link: ""
-            },
-            {
-              name: "apple",
-              icon: "mdi-apple",
-              link: ""
-            }
-          ],
-          description:
-            "Gestion de pointage d'adhérent de club de sport. Intégration d'un système de statistique du trafic de présence.",
-          technologies: [
-            {
-              name: "C#",
-              icon: "mdi-music-accidental-sharp",
-              link: ""
-            },
-            {
-              name: "MongoDB",
-              icon: "mdi-cog",
-              link: ""
-            },
-            {
-              name: "Kotlin",
-              icon: "mdi-cog",
-              link: ""
-            }
-          ],
-          code: {
-            name: "github",
-            icon: "mdi-github",
-            link: ""
-          }
-        },
-        {
-          name: "StatMAG",
-          statut: "en cours",
-          logo: "sport.svg",
-          platforms: [
-            {
-              name: "web",
-              icon: "mdi-web",
-              link: ""
-            },
-            {
-              name: "desktop",
-              icon: "mdi-laptop",
-              link: ""
-            }
-          ],
-          description:
-            "Consultation des statistiques de ventes magasin. Une partie application destkop est intégrée pour la partie administration.",
-          technologies: [
-            {
-              name: "Java FX",
-              icon: "mdi-cog",
-              link: ""
-            },
-            {
-              name: "Spring Boot",
-              icon: "mdi-cog",
-              link: ""
-            },
-            {
-              name: "PHP",
-              icon: "mdi-cog",
-              link: ""
-            },
-            {
-              name: "Javascript",
-              icon: "mdi-cog",
-              link: ""
-            }
-          ],
-          code: {
-            name: "github",
-            icon: "mdi-github-circle",
-            link: ""
-          }
-        }
-      ],
-      contactLinks: [
-        {
-          name: "Email",
-          value: "n.marry@outlook.fr",
-          link: "mailto:n.marry@outlook.fr",
-          icon: "mdi-email"
-        },
-        {
-          name: "LinkedIn",
-          value: "Nicolas MARRY",
-          link: "https://www.linkedin.com/in/nicolas-marry-45551b166/",
-          icon: "mdi-linkedin"
-        },
-        {
-          name: "YouTube",
-          value: "Nicolas MARRY",
-          link: "https://www.youtube.com/channel/UCNWxVewsjH97hXFFIYHlJJA",
-          icon: "mdi-youtube"
-        },
-        {
-          name: "Github",
-          value: "zygof",
-          link: "https://github.com/zygof/",
-          icon: "mdi-github"
-        },
-        {
-          name: "Facebook",
-          value: "Nicolas MARRY",
-          link: "https://www.facebook.com/nikos.alewe1",
-          icon: "mdi-facebook"
-        },
-        {
-          name: "Instagram",
-          value: "@zygof",
-          link: "https://www.instagram.com/zygof_/",
-          icon: "mdi-instagram"
-        }
-      ]
+      profil: json_profile,
+      projects: json_projects,
+      experiences: json_experiences,
+      training: json_training,
+      hobbies: json_hobbies,
+      links: json_links,
+      contactLinks: json_profile.contacts
     };
   }
 };
