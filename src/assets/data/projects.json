@@ -67,7 +67,7 @@
           "link": ""
         }
       ],
-      "description": "Consultation des statistiques de ventes magasin. Une partie application destkop est intégrée pour la partie administration.",
+      "description": "Consultation des statistiques de ventes magasin. Une partie application desktop est intégrée pour la partie administration.",
       "synopsis": "",
       "technologies": [
         {
@@ -124,7 +124,7 @@
           "link": ""
         }
       ],
-      "description": "Gestion d’inventaire matériel pour recyclage. Exportation format e-dechet.",
+      "description": "Gestion d’inventaire matériel pour recyclage. Exportation format E-DECHET.",
       "synopsis": "",
       "technologies": [
         {
@@ -218,7 +218,7 @@
           "link": ""
         }
       ],
-      "description": "Gestion de questionnaire d'évaluation d'entrée. Consultation des statistiques questionnaires intégrée.",
+      "description": "Gestion de questionnaire d'évaluation d'entrée. Consultation des statistiques questionnaires intégrées.",
       "synopsis": "",
       "technologies": [
         {
