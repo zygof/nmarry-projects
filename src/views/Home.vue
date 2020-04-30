@@ -13,7 +13,7 @@
             <v-col cols="12">
               <div class="display-2 font-weight-bold">{{profil.firstname}} {{profil.name}}, 
                 {{  Math.abs(new Date(Date.now()- new Date(profil.birthday_y, profil.birthday_m, profil.birthday_d).getTime()).getUTCFullYear() - 1970) }} ans 
-                <img src='../assets/france.jpg' height="25px">
+                <img src='../assets/pictures/france.jpg' height="25px">
               </div>
               <div class="headline">{{profil.job}}</div>
             </v-col>
