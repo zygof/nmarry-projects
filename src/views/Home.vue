@@ -30,7 +30,7 @@
           <div class="body-1">{{profil.aboutText}}</div>
           <div
             class="body-1 mt-3"
-          > Mon rêve?? Développer mon île La Réunion d'une toute autre manière... 😌😌</div>
+          >{{profil.aboutText2}}</div>
         </v-flex>
       </v-layout>
       <v-layout wrap my-5>

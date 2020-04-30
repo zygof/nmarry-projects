@@ -10,6 +10,8 @@
     "picture":"",
     "aboutText":
     "Se réveiller chaque matin pour développer mon sens artistique est ce qui me rend le plus en joie. Voir la satisfaction des clients et le résultat d'un travail bien fait est d'autant plus gratifiant.",
+    "aboutText2":
+    "Mon rêve?? Développer mon île La Réunion d'une toute autre manière... 😌😌",
     "contacts":[
         {
             "name": "Email",
@@ -25,7 +27,7 @@
           },
           {
             "name": "YouTube",
-            "value": "Nicolas MARRY",
+            "value": "Zygof Prod",
             "link": "https://www.youtube.com/channel/UCNWxVewsjH97hXFFIYHlJJA",
             "icon": "mdi-youtube"
           },
@@ -43,7 +45,7 @@
           },
           {
             "name": "Instagram",
-            "value": "@zygof",
+            "value": "@zygof_",
             "link": "https://www.instagram.com/zygof_/",
             "icon": "mdi-instagram"
           }

@@ -1,92 +1,492 @@
 {
   "data": [
-      {
-          "name": "MySeance",
-          "statut": "EN COURS",
-          "logo": "sport.svg",
-          "platforms": [
-              {
-                  "name": "Android",
-                  "icon": "mdi-android",
-                  "link": ""
-              },
-              {
-                  "name": "apple",
-                  "icon": "mdi-apple",
-                  "link": ""
-              }
-          ],
-          "description": "Gestion de pointage d'adhérent de club de sport. Intégration d'un système de statistique du trafic de présence.",
-          "technologies": [
-              {
-                  "name": "C#",
-                  "icon": "mdi-music-accidental-sharp",
-                  "link": ""
-              },
-              {
-                  "name": "MongoDB",
-                  "icon": "mdi-cog",
-                  "link": ""
-              },
-              {
-                  "name": "Kotlin",
-                  "icon": "mdi-cog",
-                  "link": ""
-              }
-          ],
-          "code": {
-              "name": "github",
-              "icon": "mdi-github",
-              "link": ""
-          }
-      },
-
-      {
-        "name": "StatMAG",
-        "statut": "en cours",
-        "logo": "sport.svg",
-        "platforms": [
-          {
-            "name": "web",
-            "icon": "mdi-web",
-            "link": ""
-          },
-          {
-            "name": "desktop",
-            "icon": "mdi-laptop",
-            "link": ""
-          }
-        ],
-        "description":
-          "Consultation des statistiques de ventes magasin. Une partie application destkop est intégrée pour la partie administration.",
-        "technologies": [
-          {
-            "name": "Java FX",
-            "icon": "mdi-cog",
-            "link": ""
-          },
-          {
-            "name": "Spring Boot",
-            "icon": "mdi-cog",
-            "link": ""
-          },
-          {
-            "name": "PHP",
-            "icon": "mdi-cog",
-            "link": ""
-          },
-          {
-            "name": "Javascript",
-            "icon": "mdi-cog",
-            "link": ""
-          }
-        ],
-        "code": {
-          "name": "github",
-          "icon": "mdi-github-circle",
+    {
+      "name": "MySeance",
+      "statut": "EN COURS",
+      "logo": "projet-default.png",
+      "type":"Personnel",
+      "platforms": [
+        {
+          "name": "Android",
+          "icon": "mdi-android",
+          "link": ""
+        },
+        {
+          "name": "apple",
+          "icon": "mdi-apple",
           "link": ""
         }
+      ],
+      "description": "Gestion de pointage d'adhérent de club de sport. Intégration d'un système de statistique du trafic de présence.",
+      "synopsis": "",
+      "technologies": [
+        {
+          "name": "C#",
+          "icon": "mdi-music-accidental-sharp",
+          "link": ""
+        },
+        {
+          "name": "MongoDB",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "Kotlin",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "pictures": [
+        {
+          "title": "",
+          "text": "",
+          "link": ""
+        }
+      ],
+      "code": {
+        "name": "github",
+        "icon": "mdi-github",
+        "link": ""
       }
+    },
+
+    {
+      "name": "StatMAG",
+      "statut": "EN COURS",
+      "logo": "projet-default.png",
+      "type":"Personnel",
+      "platforms": [
+        {
+          "name": "web",
+          "icon": "mdi-web",
+          "link": ""
+        },
+        {
+          "name": "desktop",
+          "icon": "mdi-laptop",
+          "link": ""
+        }
+      ],
+      "description": "Consultation des statistiques de ventes magasin. Une partie application destkop est intégrée pour la partie administration.",
+      "synopsis": "",
+      "technologies": [
+        {
+          "name": "Java FX",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "Spring Boot",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "PHP",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "Javascript",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "details": [
+        {
+          "title": "",
+          "text": "",
+          "picture": ""
+        }
+      ],
+      "pictures": [
+        {
+          "title": "",
+          "text": "",
+          "link": ""
+        }
+      ],
+      "code": {
+        "name": "github",
+        "icon": "mdi-github-circle",
+        "link": ""
+      }
+    },
+
+    {
+      "name": "InventaireDEE",
+      "statut": "DÉPLOYÉE",
+      "logo": "projet-default.png",
+      "type":"Professionnel",
+      "platforms": [
+        {
+          "name": "Laptop",
+          "icon": "mdi-laptop",
+          "link": ""
+        }
+      ],
+      "description": "Gestion d’inventaire matériel pour recyclage. Exportation format e-dechet.",
+      "synopsis": "",
+      "technologies": [
+        {
+          "name": "Java",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "details": [
+        {
+          "title": "",
+          "text": "",
+          "picture": ""
+        }
+      ],
+      "pictures": [
+        {
+          "title": "",
+          "text": "",
+          "link": ""
+        }
+      ],
+      "code": {
+        "name": "github",
+        "icon": "mdi-github",
+        "link": ""
+      }
+    },
+
+    {
+      "name": "MyStock",
+      "statut": "TEST",
+      "logo": "projet-default.png",
+      "type":"Professionnel",
+      "platforms": [
+        {
+          "name": "web",
+          "icon": "mdi-web",
+          "link": ""
+        }
+      ],
+      "description": "Gestion de stock matériel informatique.",
+      "synopsis": "",
+      "technologies": [
+        {
+          "name": "SQL Server",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "PHP",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "Javascript",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "details": [
+        {
+          "title": "",
+          "text": "",
+          "picture": ""
+        }
+      ],
+      "pictures": [
+        {
+          "title": "",
+          "text": "",
+          "link": ""
+        }
+      ],
+      "code": {
+        "name": "github",
+        "icon": "mdi-github",
+        "link": ""
+      }
+    },
+
+    {
+      "name": "QCMExpernet",
+      "statut": "TERMINÉE",
+      "logo": "projet-default.png",
+      "type":"Ecole (Expernet)",
+      "platforms": [
+        {
+          "name": "Desktop",
+          "icon": "mdi-laptop",
+          "link": ""
+        }
+      ],
+      "description": "Gestion de questionnaire d'évaluation d'entrée. Consultation des statistiques questionnaires intégrée.",
+      "synopsis": "",
+      "technologies": [
+        {
+          "name": "SQL Server",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "Java FX",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "details": [
+        {
+          "title": "",
+          "text": "",
+          "picture": ""
+        }
+      ],
+      "pictures": [
+        {
+          "title": "",
+          "text": "",
+          "link": ""
+        }
+      ],
+      "code": {
+        "name": "github",
+        "icon": "mdi-github",
+        "link": ""
+      }
+    },
+
+    {
+      "name": "ANCA",
+      "statut": "EN COURS",
+      "logo": "projet-default.png",
+      "type":"Personnel",
+      "platforms": [
+        {
+          "name": "web",
+          "icon": "mdi-web",
+          "link": ""
+        }
+      ],
+      "description": "Centralisation des données de tout les refuges de île la Réunion. Système de suivi médical des animaux.",
+      "synopsis": "",
+      "technologies": [
+        {
+          "name": "Angular",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "PostgreSQL",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "TypeORM",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "details": [
+        {
+          "title": "",
+          "text": "",
+          "picture": ""
+        }
+      ],
+      "pictures": [
+        {
+          "title": "",
+          "text": "",
+          "link": ""
+        }
+      ],
+      "code": {
+        "name": "github",
+        "icon": "mdi-github",
+        "link": ""
+      }
+    },
+
+    {
+      "name": "GLPI Client",
+      "statut": "TEST",
+      "logo": "projet-default.png",
+      "type":"Professionel",
+      "platforms": [
+        {
+          "name": "desktop",
+          "icon": "mdi-laptop",
+          "link": ""
+        }
+      ],
+      "description": "Système de gestion des tickets GLPI pour les employés.",
+      "synopsis": "",
+      "technologies": [
+        {
+          "name": "JavaFX",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "details": [
+        {
+          "title": "",
+          "text": "",
+          "picture": ""
+        }
+      ],
+      "pictures": [
+        {
+          "title": "",
+          "text": "",
+          "link": ""
+        }
+      ],
+      "code": {
+        "name": "github",
+        "icon": "mdi-github",
+        "link": ""
+      }
+    },
+
+    {
+      "name": "NMARRY-Project",
+      "statut": "DÉPLOYÉE",
+      "logo": "projet-default.png",
+      "type":"Personnel",
+      "platforms": [
+        {
+          "name": "web",
+          "icon": "mdi-web",
+          "link": ""
+        }
+      ],
+      "description": "Portfolio personnel.",
+      "synopsis": "",
+      "technologies": [
+        {
+          "name": "VueJS",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "Vuetify",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "details": [
+        {
+          "title": "",
+          "text": "",
+          "picture": ""
+        }
+      ],
+      "pictures": [
+        {
+          "title": "",
+          "text": "",
+          "link": ""
+        }
+      ],
+      "code": {
+        "name": "github",
+        "icon": "mdi-github",
+        "link": ""
+      }
+    },
+
+    {
+      "name": "CaddyRUN",
+      "statut": "FINI",
+      "logo": "projet-default.png",
+      "type":"Ecole (Lycée George Brassens)",
+      "platforms": [
+        {
+          "name": "Arduino",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "description": "Projet Bac S SI : Conception d'un caddie électrique pour les personnes à mobilité réduite.",
+      "synopsis": "",
+      "technologies": [
+        {
+          "name": "Arduino",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "C#",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "details": [
+        {
+          "title": "",
+          "text": "",
+          "picture": ""
+        }
+      ],
+      "pictures": [
+        {
+          "title": "",
+          "text": "",
+          "link": ""
+        }
+      ],
+      "code": {
+        "name": "github",
+        "icon": "mdi-github",
+        "link": ""
+      }
+    },
+
+    {
+      "name": "Ball Balance Machine",
+      "statut": "FINI",
+      "logo": "projet-default.png",
+      "type":"École (Lycée George Brassens)",
+      "platforms": [
+        {
+          "name": "Arduino",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "description": "BAC S Spécialité ISN : Conception d'un plateau à système d'asservissement.",
+      "synopsis": "",
+      "technologies": [
+        {
+          "name": "Arduino",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "C#",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "details": [
+        {
+          "title": "",
+          "text": "",
+          "picture": ""
+        }
+      ],
+      "pictures": [
+        {
+          "title": "",
+          "text": "",
+          "link": ""
+        }
+      ],
+      "code": {
+        "name": "github",
+        "icon": "mdi-github",
+        "link": ""
+      }
+    }
 
   ]
 }
