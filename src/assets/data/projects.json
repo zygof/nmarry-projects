@@ -51,7 +51,7 @@
     },
 
     {
-      "name": "StatMAG",
+      "name": "StatMag",
       "statut": "EN COURS",
       "logo": "projet-default.png",
       "type":"Personnel",
@@ -265,7 +265,7 @@
           "link": ""
         }
       ],
-      "description": "Centralisation des données de tout les refuges de île la Réunion. Système de suivi médical des animaux.",
+      "description": "Centralisation des données de tout les refuges animaux de île la Réunion. Système de suivi médical des animaux.",
       "synopsis": "",
       "technologies": [
         {
@@ -307,7 +307,7 @@
 
     {
       "name": "GLPI Client",
-      "statut": "TEST",
+      "statut": "EN TEST",
       "logo": "projet-default.png",
       "type":"Professionel",
       "platforms": [
