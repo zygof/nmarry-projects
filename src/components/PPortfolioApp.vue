@@ -67,7 +67,7 @@ export default {
   },
   methods: {
     logo(name) {
-      return require("../assets/pictures/" + name);
+      return require("../assets/images/" + name);
     }
   }
 };
