@@ -28,7 +28,7 @@
     <v-container class="mt-5">
       <v-layout wrap>
         <v-flex xs12>
-          <div class="display-1 font-weight-bold" id="about">À propos de moi</div>
+          <div class="display-1 font-weight-bold" id="about">À propos</div>
         </v-flex>
         <v-flex xs12 mt-5>
           <div class="body-1">{{profile.aboutText}}</div>
@@ -38,7 +38,7 @@
 
       <v-layout wrap my-5>
         <v-flex xs12>
-          <div class="display-1 font-weight-bold" id="about">Formations</div>
+          <div class="display-1 font-weight-bold" id="training">Formations</div>
         </v-flex>
         <v-flex class="mt-5">
           <Timeline :timeline-items="dataTimeline" :message-when-no-items="messageWhenNoItems" />
@@ -47,7 +47,7 @@
 
       <v-layout wrap my-5>
         <v-flex xs12>
-          <div class="display-1 font-weight-bold" id="portfolio">Mes projets</div>
+          <div class="display-1 font-weight-bold" id="projects">Mes projets</div>
         </v-flex>
         <v-flex xs12 class="mt-5">
           <v-layout wrap>

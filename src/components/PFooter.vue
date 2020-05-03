@@ -15,7 +15,7 @@
       </v-card-text>
 
       <v-btn class="white--text pt-0" color="red" @click="downloadCV()">
-        Télécharger mon CV
+        Télécharger CV
         <v-icon size="20px">mdi-adobe-acrobat</v-icon>
       </v-btn>
 
