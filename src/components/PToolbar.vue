@@ -1,9 +1,9 @@
 <template>
   <v-app-bar flat absolute color="transparent" dark height="120px" class="pb-5">
-    <v-toolbar color="transparent" class="toolbar" justify-center>
+    <v-toolbar color="transparent" class="no-shadow" justify-center>
       <v-container>
         <v-layout>
-          <v-toolbar-title class="display-1 font-weight-bold">NM P.</v-toolbar-title>
+          <v-toolbar-title href="/" color="transparent" class="no-shadow display-1 font-weight-bold">NM P.</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items class="hidden-sm-and-down" v-for="item in items" :key="item.title">
             <v-btn @click="$vuetify.goTo(item.link,options )" text>{{item.title}}</v-btn>
@@ -11,13 +11,8 @@
 
           <v-menu bottom left>
               <template v-slot:activator="{ on }">
-                <v-btn
-                  dark
-                  icon
-                  v-on="on"
-                  class="hidden-md-and-up"
-                >
-                  <v-icon>mdi-dots-vertical</v-icon>
+                <v-btn dark icon v-on="on" class="hidden-md-and-up">
+                  <v-app-bar-nav-icon></v-app-bar-nav-icon>
                 </v-btn>
               </template>
   
@@ -63,7 +58,7 @@ export default {
 </script>
 
 <style>
-.toolbar {
+.no-shadow {
   box-shadow: none !important;
 }
 </style>
