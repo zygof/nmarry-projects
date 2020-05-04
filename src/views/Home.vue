@@ -5,13 +5,14 @@
     <v-img
       dark
       max-height="500px"
-      src="https://images.unsplash.com/photo-1505238680356-667803448bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+      src="../assets/images/home.jpg"
     >
       <v-layout fill-height align-center>
         <v-container>
+          <v-row style="height: 70px"></v-row>
           <v-row align="center" justify="center" class="white--text">
             <v-col cols="12">
-              <div class="display-2 font-weight-bold">
+              <div class="display-1 font-weight-bold" >
                 {{profile.firstname}} {{profile.name}},
                 {{ Math.abs(new Date(Date.now()- new Date(profile.birthday_y, profile.birthday_m, profile.birthday_d).getTime()).getUTCFullYear() - 1970) }} ans
                 <img

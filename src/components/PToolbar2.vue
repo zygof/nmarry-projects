@@ -1,17 +1,18 @@
 <template>
   <div>
-    <v-app-bar flat absolute dark height="100px" max-height="500px" src="https://images.unsplash.com/photo-1505238680356-667803448bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+    <v-app-bar flat absolute dark height="100px" max-height="500px" src="../assets/images/home.jpg">
       <v-toolbar color="transparent" class="no-shadow" justify-center>
         <v-container>
           <v-layout>
             <v-toolbar-title
-              href="/"
               color="transparent"
+              style="cursor: pointer"
               class="no-shadow display-1 font-weight-bold"
+              @click="$router.push('/')"
             >NM P.</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-sm-and-down" v-for="item in items" :key="item.title">
-              <v-btn @click="$vuetify.goTo(item.link,options )" text>{{item.title}}</v-btn>
+              <v-btn :href="item.link" text>{{item.title}}</v-btn>
             </v-toolbar-items>
 
             <v-menu bottom left>
@@ -25,7 +26,7 @@
                 <v-list-item
                   v-for="(item, i) in items"
                   :key="i"
-                  @click="$vuetify.goTo(item.link,options )"
+                  :href="item.link"
                 >
                   <v-list-item-title>
                     <div>{{item.title}}</div>
@@ -54,10 +55,10 @@ export default {
         easing: "easeInOutCubic"
       },
       items: [
-        { title: "À propos", link: "#about" },
-        { title: "Formations", link: "#training" },
-        { title: "Mes projets", link: "#projects" },
-        { title: "Contact", link: "#contact" }
+        { title: "À propos", link: "/#about" },
+        { title: "Formations", link: "/#training" },
+        { title: "Mes projets", link: "/#projects" },
+        { title: "Contact", link: "/#contact" }
       ]
     };
   },

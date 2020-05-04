@@ -3,7 +3,7 @@
     <v-toolbar color="transparent" class="no-shadow" justify-center>
       <v-container>
         <v-layout>
-          <v-toolbar-title href="/" color="transparent" class="no-shadow display-1 font-weight-bold">NM P.</v-toolbar-title>
+          <v-toolbar-title color="transparent" class="no-shadow display-1 font-weight-bold">NM P.</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items class="hidden-sm-and-down" v-for="item in items" :key="item.title">
             <v-btn @click="$vuetify.goTo(item.link,options )" text>{{item.title}}</v-btn>
@@ -31,10 +31,12 @@
 </template>
 
 <script>
-// import * as easings from "vuetify/es5/services/goto/easing-patterns";
+import json_profile from "../assets/data/profile.json";
+
 export default {
   data() {
     return {
+      profile: json_profile,
       options: {
         duration: 300,
         offset: 0,
@@ -60,5 +62,13 @@ export default {
 <style>
 .no-shadow {
   box-shadow: none !important;
+}
+
+.profile{
+  height: 100%;
+    display: flex;
+    justify-content: center;
+      align-items: center;
+  vertical-align: center;
 }
 </style>

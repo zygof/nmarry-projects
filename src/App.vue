@@ -1,15 +1,29 @@
 <template>
   <v-app>
     <v-layout v-if="this.$route.path == '/'">
-      <p-toolbar />
+      <p-toolbar :profile="profile" />
     </v-layout>
     <v-layout v-else>
-      <p-toolbar2 :profile="profile"/>
+      <p-toolbar2 :profile="profile" />
     </v-layout>
     <v-content style="background-color: white">
       <!-- <HelloWorld /> -->
       <router-view />
     </v-content>
+
+    <v-btn
+      v-scroll="onScroll"
+      v-show="fab"
+      fab
+      dark
+      fixed
+      bottom
+      right
+      @click="toTop"
+    >
+      <v-icon>mdi-arrow-up</v-icon>
+    </v-btn>
+
     <p-footer :profile="profile" :icons="icons" />
   </v-app>
 </template>
@@ -30,8 +44,19 @@ export default {
   },
 
   data: () => ({
+    fab: false,
     profile: json_profile,
     icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"]
-  })
+  }),
+  methods: {
+    onScroll(e) {
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset || e.target.scrollTop || 0;
+      this.fab = top > 20;
+    },
+    toTop() {
+      this.$vuetify.goTo(0);
+    }
+  }
 };
 </script>
