@@ -42,7 +42,7 @@
           <div class="display-1 font-weight-bold" id="training">Formations</div>
         </v-flex>
         <v-flex class="mt-5">
-          <Timeline :timeline-items="dataTimeline" :message-when-no-items="messageWhenNoItems" />
+          <Timeline :timeline-items="training.data" :message-when-no-items="training.messageWhenNoItems" />
         </v-flex>
       </v-layout>
 
@@ -103,20 +103,18 @@ export default {
       hobbies: json_hobbies,
       links: json_links,
       contactLinks: json_profile.contacts,
-
-      messageWhenNoItems: "There arent items",
       dataTimeline: [
         {
-          from: new Date(2018, 1, 1),
-          to: new Date(2020, 1, 1),
+          from: "2018-01-01",
+          to: "2020-01-01",
           diploma: "Bac + 4",
           title: "Conception Développement d'Application",
           location: "Expernet Réunion",
           color: "black",
         },
         {
-          from: new Date(2016, 1, 1),
-          to: new Date(2018, 1, 1),
+          from: "2005-01-01",
+          to: "2032-01-01",
           diploma: "Bac + 2",
           title: "BTS Système Numérique",
           option: "Informatique et réseau",
@@ -124,7 +122,8 @@ export default {
           color: "black"
         },
         {
-          from: new Date(2015, 11, 29),
+          from: "2019-01-01",
+          to: "2080-01-01",
           diploma: "BAC",
           title: "BAC Scientifique Science de l'ingénieur",
           option: "Informatique et Science du Numérique",

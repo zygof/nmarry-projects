@@ -4,12 +4,13 @@
       <div
         v-for="(timelineContent, timelineIndex) in dataTimeline"
         :key="timelineIndex"
-        :class="wrapperItemClass(timelineIndex)"
+        :class="wrapperItemClass()"
       >
         <div class="section-year">
-          <p v-if="hasYear(timelineContent)" class="year">
-            {{ getYear(timelineContent) }}
-          </p>
+          <span v-if="hasFromYear(timelineContent)" class="year">
+            {{ getFromYear(timelineContent) }}
+            <span v-if="hasToYear(timelineContent)" class="yearTo"> - {{getToYear(timelineContent)}}</span>
+          </span>
         </div>
         <TimelineItem
           :item-timeline="timelineContent"
@@ -73,17 +74,13 @@ export default {
     }
   },
   methods: {
-    wrapperItemClass(timelineIndex) {
-      const isSameYearPreviousAndCurrent = this.checkYearTimelineItem(
-        timelineIndex
-      )
-      const isUniqueYear =
-        this.uniqueYear &&
-        isSameYearPreviousAndCurrent &&
-        this.order !== undefined
+    stringToDate(dateString){
+      return(new Date(dateString.split('-')[0], dateString.split('-')[1],dateString.split('-')[2]));
+    },
+    wrapperItemClass() {
       return {
         'wrapper-item': true,
-        'unique-timeline': this.uniqueTimeline || isUniqueYear
+        'unique-timeline': true
       }
     },
     checkYearTimelineItem(timelineIndex) {
@@ -93,21 +90,31 @@ export default {
       if (!previousItem || !nextItem) {
         return false
       }
-      const fullPreviousYear = this.getYear(previousItem)
-      const fullNextYear = this.getYear(nextItem)
-      const fullCurrentYear = this.getYear(currentItem)
+      const fullPreviousYear = this.getToYear(previousItem)
+      const fullNextYear = this.getToYear(nextItem)
+      const fullCurrentYear = this.getToYear(currentItem)
       return (
         (fullPreviousYear === fullCurrentYear &&
           fullCurrentYear === fullNextYear) ||
         fullCurrentYear === fullNextYear
       )
     },
-    getYear(date) {
-      return date.from.getFullYear()
+    getFromYear(date) {
+      var dateFrom = new Date(date.from.split('-')[0])
+      return dateFrom.getFullYear()
     },
-    hasYear(dataTimeline) {
+    getToYear(date) {
+      var dateTo = new Date(date.to.split('-')[0])
+      return dateTo.getFullYear()
+    },
+    hasFromYear(dataTimeline) {
       return (
         Object.prototype.hasOwnProperty.call(dataTimeline,'from') && dataTimeline.from !== undefined
+      )
+    },
+     hasToYear(dataTimeline) {
+      return (
+        Object.prototype.hasOwnProperty.call(dataTimeline,'to') && dataTimeline.to !== undefined
       )
     },
     getTimelineItemsAssembled(items) {
@@ -158,6 +165,10 @@ export default {
       font-size: 18px;
       .year {
         margin: 0;
+        text-align: right;
+      }
+      .yearTo{
+        margin-right: 10px;
       }
     }
     &.unique-timeline {
