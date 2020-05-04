@@ -1,7 +1,5 @@
 <template>
   <div class="home">
-    <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <v-img
       dark
       max-height="500px"
@@ -76,7 +74,6 @@
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from "@/components/HelloWorld.vue";
 import PPortfolioApp from "@/components/PPortfolioApp.vue";
 import PContactInfo from "@/components/PContactInfo.vue";
 import Timeline from "@/components/Timeline.vue";
@@ -102,35 +99,7 @@ export default {
       training: json_training,
       hobbies: json_hobbies,
       links: json_links,
-      contactLinks: json_profile.contacts,
-      dataTimeline: [
-        {
-          from: "2018-01-01",
-          to: "2020-01-01",
-          diploma: "Bac + 4",
-          title: "Conception Développement d'Application",
-          location: "Expernet Réunion",
-          color: "black",
-        },
-        {
-          from: "2005-01-01",
-          to: "2032-01-01",
-          diploma: "Bac + 2",
-          title: "BTS Système Numérique",
-          option: "Informatique et réseau",
-          location: "Lycée Roland Garros",
-          color: "black"
-        },
-        {
-          from: "2019-01-01",
-          to: "2080-01-01",
-          diploma: "BAC",
-          title: "BAC Scientifique Science de l'ingénieur",
-          option: "Informatique et Science du Numérique",
-          location: "Lycée George Brassens",
-          color: "black"
-        }
-      ]
+      contactLinks: json_profile.contacts
     };
   }
 };
