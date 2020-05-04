@@ -13,14 +13,14 @@
             "to": "2018-01-01",
             "diploma": "Bac + 2",
             "title": "BTS Système Numérique",
-            "option": "Informatique et réseau",
+            "option": "Informatique et Réseau",
             "location": "Lycée Roland Garros",
             "color": "black"
         },
         {
             "from": "2015-01-01",
             "diploma": "BAC",
-            "title": "BAC Scientifique Science de l'ingénieur",
+            "title": "BAC Scientifique SI",
             "option": "Informatique et Science du Numérique",
             "location": "Lycée George Brassens",
             "color": "black"

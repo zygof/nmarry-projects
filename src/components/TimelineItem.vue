@@ -4,6 +4,7 @@
       <span :style="getBackgroundColour(itemTimeline.color)" class="dot" />
       <h4 class="diploma-item">{{ itemTimeline.diploma }}</h4>
       <h3 class="title-item" v-html="itemTimeline.title" />
+      <h4 class="title-item" v-html="itemTimeline.option" />
       <p class="location-item" v-html="itemTimeline.location" />
     </div>
   </section>
