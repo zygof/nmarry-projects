@@ -1,66 +1,69 @@
 <template>
-<v-card class="container-pj" height="100%"  @click="$router.push('/projects/' + app.name)">
-  <v-card flat color="transparent" max-width="350px" class="align-stretch" width="100%">
-    <v-card-title>
-      <v-layout>
-        <v-flex>
-          <v-card
-            :href="app.platforms[0].link"
-            target="_blank"
-            elevation="5"
-            style="border-radius: 20px"
-            width="100px"
-            height="100px"
-          >
-            <v-img :src="logo(app.logo)" />
-          </v-card>
-        </v-flex>
-        <v-flex xs7>
-          <div>{{app.name}}</div>
-          <div>
-            <v-chip small pill color="blue" dark>{{app.statut}}</v-chip>
-          </div>
+  <v-card class="container-pj" height="100%" @click="$router.push('/projects/' + project.name)">
+    <v-card flat color="transparent" class="align-stretch" width="100%">
+      <v-layout wrap>
+        <v-card-title style="width: 100%">
+          <v-layout>
+            <v-flex class="no-flex">
+              <v-card
+                :href="project.platforms[0].link"
+                target="_blank"
+                elevation="5"
+                style="border-radius: 20px"
+                width="100px"
+                height="100px"
+                class="pj-resume"
+              >
+                <v-img :src="logo(project.logo)" />
+              </v-card>
+            </v-flex>
+            <v-flex xs7 style="margin-left:5%">
+              <div>{{project.name}}</div>
+              <div>
+                <v-chip small pill color="blue" dark>{{project.statut}}</v-chip>
+              </div>
 
-          <template v-for="(platform, i) in app.platforms">
-            <!-- <div> -->
-            <v-btn :href="platform.link" target="_blank" icon :key="i">
-              <v-icon>{{platform.icon}}</v-icon>
+              <template v-for="(platform, i) in project.platforms">
+                <!-- <div> -->
+                <v-btn :href="platform.link" target="_blank" icon :key="i">
+                  <v-icon>{{platform.icon}}</v-icon>
+                </v-btn>
+                <!-- </div> -->
+              </template>
+            </v-flex>
+          </v-layout>
+        </v-card-title>
+        <v-card-text>
+          <div>{{project.description}}</div>
+          <div class="title mt-2 pt-2">Technologies utilisées</div>
+          <v-layout>
+            <template v-for="(tech, i) in project.technologies">
+              <v-flex xs3 :key="i">
+                <div class="text-center">
+                  <v-btn icon>
+                    <v-icon>{{tech.icon}}</v-icon>
+                  </v-btn>
+                  <div class="caption">{{tech.name}}</div>
+                </div>
+              </v-flex>
+            </template>
+          </v-layout>
+          <div v-if="project.code.link">
+            <div class="title mt-2">Code</div>
+            <v-btn icon :href="project.code.link" target="_blank">
+              <v-icon>{{project.code.icon}}</v-icon>
             </v-btn>
-            <!-- </div> -->
-          </template>
-        </v-flex>
+          </div>
+        </v-card-text>
       </v-layout>
-    </v-card-title>
-    <v-card-text>
-      <div>{{app.description}}</div>
-      <div class="title mt-2 pt-2">Technologies utilisées</div>
-      <v-layout>
-        <template v-for="(tech, i) in app.technologies">
-          <v-flex xs3 :key="i">
-            <div class="text-center">
-              <v-btn icon>
-                <v-icon>{{tech.icon}}</v-icon>
-              </v-btn>
-              <div class="caption">{{tech.name}}</div>
-            </div>
-          </v-flex>
-        </template>
-      </v-layout>
-      <div v-if="app.code.link">
-        <div class="title mt-2">Code</div>
-        <v-btn icon :href="app.code.link" target="_blank">
-          <v-icon>{{app.code.icon}}</v-icon>
-        </v-btn>
-      </div>
-    </v-card-text>
-  </v-card>
+    </v-card>
   </v-card>
 </template>
 
 <script>
 export default {
   props: {
-    app: {
+    project: {
       type: Object,
       default: function() {
         return {};
@@ -76,10 +79,13 @@ export default {
 </script>
 
 <style>
-.container-pj{
+.container-pj {
   box-shadow: none;
 }
-.container-pj:hover{
-  background-color: #E0E0E0;
+.container-pj:hover {
+  background-color: #e0e0e0;
+}
+.no-flex{
+  flex: 0 0;
 }
 </style>

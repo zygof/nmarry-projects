@@ -48,13 +48,18 @@
           <div class="display-1 font-weight-bold" id="projects">Mes projets</div>
         </v-flex>
         <v-card xs12 class="mt-5">
-          <v-layout wrap>
-            <template v-for="(pj, i) in projects.data">
+
+
+
+
+          <v-layout wrap justify-center style="max-width:1160px">
+            <template v-for="(project, i) in projects.data" >
               <v-flex :key="i" xs12 sm6 md4 v-if="i < 6">
-                <p-portfolio-app :app="pj" />
+                <p-portfolio-app :project="project"/>
               </v-flex>
             </template>
           </v-layout>
+
 
           <v-card-actions class="text-right">
             <v-spacer></v-spacer>
