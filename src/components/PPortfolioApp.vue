@@ -4,14 +4,21 @@
       <v-layout wrap>
         <v-card-title style="width: 100%">
           <v-layout>
-              <v-card :href="project.platforms[0].link" class="pj-resume" elevation="5" style="border-radius: 20px" width="100px" height="100px">
-                <v-img :src="logo(project.logo)"/>
-              </v-card>
-       
+            <v-card
+              :href="project.platforms[0].link"
+              class="pj-resume"
+              elevation="5"
+              style="border-radius: 20px"
+              width="100px"
+              height="100px"
+            >
+              <v-img :src="logo(project.logo)" />
+            </v-card>
+
             <v-flex xs7 style="margin-left:5%">
               <div>{{project.name}}</div>
               <div>
-                <v-chip small pill color="blue" dark>{{project.statut}}</v-chip>
+                <v-chip small pill :color="statutColor(project.statut)" dark>{{project.statut}}</v-chip>
               </div>
 
               <template v-for="(platform, i) in project.platforms">
@@ -64,6 +71,16 @@ export default {
   methods: {
     logo(name) {
       return require("../assets/images/" + name);
+    },
+    statutColor(statut) {
+      console.log(statut);
+      switch(statut){
+        case 'EN COURS': return 'orange';
+        case 'DÉPLOYÉE': return 'green';
+        case 'EN TEST': return 'yellow darken-1';
+        case 'TERMINÉE': return 'green lighten-2';
+        default: return 'dark'
+      }
     }
   }
 };
@@ -77,7 +94,7 @@ export default {
 .container-pj:hover {
   background-color: #e0e0e0;
 }
-.no-flex{
+.no-flex {
   flex: 0 0;
 }
 </style>
