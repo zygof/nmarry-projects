@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-layout v-if="this.$route.path == '/'">
-      <p-toolbar :profile="profile" />
+      <p-toolbar :profile="profile"/>
     </v-layout>
     <v-layout v-else>
       <p-toolbar2 :profile="profile" />
