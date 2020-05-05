@@ -16,8 +16,8 @@
             </v-card>
 
             <v-flex xs7 style="margin-left:5%">
-              <div>{{project.name}}</div>
-              <h5 class="subtitle-2" style="margin:0px">{{project.type}}</h5>
+              <span>{{project.name}} <v-btn class="subtitle-2" text style="font-size: 14px !important; padding:0% !important, min-width:0px">{{project.type}}</v-btn></span>
+              
               <div>
                 <v-chip small pill :color="statutColor(project.statut)" dark>{{project.statut}}</v-chip>
               </div>

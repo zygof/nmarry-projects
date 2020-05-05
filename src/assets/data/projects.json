@@ -4,7 +4,7 @@
       "name": "MySeance",
       "statut": "EN COURS",
       "logo": "projet-default.png",
-      "type":"Personnel",
+      "type":"PERSO",
       "platforms": [
         {
           "name": "Android",
@@ -54,7 +54,7 @@
       "name": "StatMag",
       "statut": "EN COURS",
       "logo": "projet-default.png",
-      "type":"Personnel",
+      "type":"PERSO",
       "platforms": [
         {
           "name": "web",
@@ -116,7 +116,7 @@
       "name": "InventaireDEE",
       "statut": "DÉPLOYÉE",
       "logo": "projet-default.png",
-      "type":"Professionnel",
+      "type":"PRO",
       "platforms": [
         {
           "name": "Laptop",
@@ -158,7 +158,7 @@
       "name": "MyStock",
       "statut": "EN TEST",
       "logo": "projet-default.png",
-      "type":"Professionnel",
+      "type":"PRO",
       "platforms": [
         {
           "name": "web",
@@ -210,7 +210,7 @@
       "name": "QCMExpernet",
       "statut": "TERMINÉE",
       "logo": "projet-default.png",
-      "type":"Ecole (Expernet)",
+      "type":"ÉCOLE",
       "platforms": [
         {
           "name": "Desktop",
@@ -257,7 +257,7 @@
       "name": "ANCA",
       "statut": "EN COURS",
       "logo": "projet-default.png",
-      "type":"Personnel",
+      "type":"PERSO",
       "platforms": [
         {
           "name": "web",
@@ -265,7 +265,7 @@
           "link": ""
         }
       ],
-      "description": "Centralisation des données de tout les refuges animaux de île la Réunion. Système de suivi médical des animaux.",
+      "description": "Centralisation des données de tout les refuges animaux de île de la Réunion. Système de suivi médical des animaux.",
       "synopsis": "",
       "technologies": [
         {
@@ -351,7 +351,7 @@
       "name": "NMARRY-Project",
       "statut": "DÉPLOYÉE",
       "logo": "projet-default.png",
-      "type":"Personnel",
+      "type":"PERSO",
       "platforms": [
         {
           "name": "web",
@@ -359,7 +359,7 @@
           "link": ""
         }
       ],
-      "description": "Portfolio personnel.",
+      "description": "Portfolio PERSO.",
       "synopsis": "",
       "technologies": [
         {
@@ -398,7 +398,7 @@
       "name": "CaddyRUN",
       "statut": "TERMINÉE",
       "logo": "projet-default.png",
-      "type":"Ecole (Lycée George Brassens)",
+      "type":"ÉCOLE",
       "platforms": [
         {
           "name": "Arduino",
