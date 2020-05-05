@@ -1,29 +1,33 @@
 <template>
   <v-app-bar flat absolute color="transparent" dark height="120px" class="pb-5">
     <v-toolbar color="transparent" class="no-shadow" justify-center>
-      <v-container>
+      <v-container style="padding:0%">
         <v-layout>
-          <v-toolbar-title color="transparent" class="no-shadow display-1 font-weight-bold">NM P.</v-toolbar-title>
-          <v-spacer></v-spacer>
-          <v-toolbar-items class="hidden-sm-and-down" v-for="item in items" :key="item.title">
-            <v-btn @click="$vuetify.goTo(item.link,options )" text>{{item.title}}</v-btn>
-          </v-toolbar-items>
+            <v-toolbar-title color="transparent" style="line-height:2.7rem" class="display-1 font-weight-bold">NM P.</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-toolbar-items class="hidden-sm-and-down" v-for="item in items" :key="item.title">
+              <v-btn @click="$vuetify.goTo(item.link,options )" text>{{item.title}}</v-btn>
+            </v-toolbar-items>
 
           <v-menu bottom left>
-              <template v-slot:activator="{ on }">
-                <v-btn dark icon v-on="on" class="hidden-md-and-up">
-                  <v-app-bar-nav-icon></v-app-bar-nav-icon>
-                </v-btn>
-              </template>
-  
-              <v-list>
-                <v-list-item v-for="(item, i) in items" :key="i" @click="$vuetify.goTo(item.link,options )">
-                  <v-list-item-title>
-                    <div>{{item.title}}</div>
-                    </v-list-item-title>
-                </v-list-item>
-              </v-list>
-            </v-menu>
+            <template v-slot:activator="{ on }">
+              <v-btn dark icon v-on="on" class="hidden-md-and-up">
+                <v-app-bar-nav-icon></v-app-bar-nav-icon>
+              </v-btn>
+            </template>
+
+            <v-list>
+              <v-list-item
+                v-for="(item, i) in items"
+                :key="i"
+                @click="$vuetify.goTo(item.link,options )"
+              >
+                <v-list-item-title>
+                  <div>{{item.title}}</div>
+                </v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
         </v-layout>
       </v-container>
     </v-toolbar>
@@ -64,11 +68,11 @@ export default {
   box-shadow: none !important;
 }
 
-.profile{
+.profile {
   height: 100%;
-    display: flex;
-    justify-content: center;
-      align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   vertical-align: center;
 }
 </style>
