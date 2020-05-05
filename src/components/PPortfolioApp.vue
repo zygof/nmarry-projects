@@ -4,19 +4,10 @@
       <v-layout wrap>
         <v-card-title style="width: 100%">
           <v-layout>
-            <v-flex class="no-flex">
-              <v-card
-                :href="project.platforms[0].link"
-                target="_blank"
-                elevation="5"
-                style="border-radius: 20px"
-                width="100px"
-                height="100px"
-                class="pj-resume"
-              >
-                <v-img :src="logo(project.logo)" />
+              <v-card :href="project.platforms[0].link" class="pj-resume" elevation="5" style="border-radius: 20px" width="100px" height="100px">
+                <v-img :src="logo(project.logo)"/>
               </v-card>
-            </v-flex>
+       
             <v-flex xs7 style="margin-left:5%">
               <div>{{project.name}}</div>
               <div>
@@ -81,6 +72,7 @@ export default {
 <style>
 .container-pj {
   box-shadow: none;
+  margin: 2%;
 }
 .container-pj:hover {
   background-color: #e0e0e0;

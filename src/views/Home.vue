@@ -43,14 +43,11 @@
         </v-flex>
       </v-layout>
 
-      <v-layout wrap my-5>
+      <v-layout wrap my-5 justify-center>
         <v-flex xs12>
           <div class="display-1 font-weight-bold" id="projects">Mes projets</div>
         </v-flex>
-        <v-card xs12 class="mt-5">
-
-
-
+        <v-card xs12 class="mt-5" elevation="7">
 
           <v-layout wrap justify-center style="max-width:1160px">
             <template v-for="(project, i) in projects.data" >
@@ -60,10 +57,9 @@
             </template>
           </v-layout>
 
-
           <v-card-actions class="text-right">
             <v-spacer></v-spacer>
-            <v-btn dark width="100%" @click="$router.push('/projects')">Voir plus (<span>{{Object.keys(projects.data).length}}</span>)...</v-btn>
+            <v-btn dark style="margin-top:1%" width="100%" @click="$router.push('/projects')">Voir plus (<span>{{Object.keys(projects.data).length}}</span>)...</v-btn>
           </v-card-actions>
         </v-card>
       </v-layout>
