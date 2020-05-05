@@ -1,5 +1,6 @@
 <template>
-  <v-card flat color="transparent" max-width="350px">
+<v-card class="container-pj" height="100%"  @click="$router.push('/projects/' + app.name)">
+  <v-card flat color="transparent" max-width="350px" class="align-stretch" width="100%">
     <v-card-title>
       <v-layout>
         <v-flex>
@@ -32,7 +33,7 @@
     </v-card-title>
     <v-card-text>
       <div>{{app.description}}</div>
-      <div class="title mt-2">Technologies utilisées</div>
+      <div class="title mt-2 pt-2">Technologies utilisées</div>
       <v-layout>
         <template v-for="(tech, i) in app.technologies">
           <v-flex xs3 :key="i">
@@ -52,6 +53,7 @@
         </v-btn>
       </div>
     </v-card-text>
+  </v-card>
   </v-card>
 </template>
 
@@ -74,4 +76,10 @@ export default {
 </script>
 
 <style>
+.container-pj{
+  box-shadow: none;
+}
+.container-pj:hover{
+  background-color: #E0E0E0;
+}
 </style>
