@@ -36,7 +36,7 @@
           <div class="display-1 font-weight-bold" id="training">Formations</div>
         </v-flex>
         <v-flex class="mt-5">
-          <Timeline
+          <p-training
             :timeline-items="training.data"
             :message-when-no-items="training.messageWhenNoItems"
           />
@@ -52,14 +52,14 @@
           <v-layout wrap justify-center style="max-width:1160px">
             <template v-for="(project, i) in projects.data" >
               <v-flex :key="i" xs12 sm6 md4 v-if="i < 6">
-                <p-portfolio-app :project="project"/>
+                <p-project :project="project"/>
               </v-flex>
             </template>
           </v-layout>
 
           <v-card-actions class="text-right">
             <v-spacer></v-spacer>
-            <v-btn dark style="margin-top:1%" width="100%" @click="$router.push('/projects')">Voir plus (<span>{{Object.keys(projects.data).length}}</span>)...</v-btn>
+            <v-btn dark large style="margin-top:1%" width="100%" @click="$router.push('/projects')">Voir plus (<span>{{Object.keys(projects.data).length}}</span>)...</v-btn>
           </v-card-actions>
         </v-card>
       </v-layout>
@@ -70,7 +70,7 @@
         </v-flex>
         <template v-for="(contact, i) in contactLinks">
           <v-flex sm6 md4 xs12 :key="i">
-            <p-contact-info :contact="contact" />
+            <p-contact :contact="contact" />
           </v-flex>
         </template>
       </v-layout>
@@ -80,9 +80,9 @@
 
 <script>
 // @ is an alias to /src
-import PPortfolioApp from "@/components/PPortfolioApp.vue";
-import PContactInfo from "@/components/PContactInfo.vue";
-import Timeline from "@/components/Timeline.vue";
+import PProject from "@/components/PProject.vue";
+import PContact from "@/components/PContact.vue";
+import PTraining from "@/components/Training.vue";
 import json_profile from "../assets/data/profile.json";
 import json_projects from "../assets/data/projects.json";
 import json_experiences from "../assets/data/experiences.json";
@@ -93,9 +93,9 @@ import json_links from "../assets/data/links.json";
 export default {
   name: "home",
   components: {
-    PPortfolioApp,
-    PContactInfo,
-    Timeline
+    PProject,
+    PContact,
+    PTraining
   },
   data() {
     return {

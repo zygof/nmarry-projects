@@ -1,13 +1,12 @@
 <template>
   <v-app>
     <v-layout v-if="this.$route.path == '/'">
+      <p-toolbarHome :profile="profile"/>
+    </v-layout>
+    <v-layout v-else style="flex : 0; margin-top: 70px;">
       <p-toolbar :profile="profile"/>
     </v-layout>
-    <v-layout v-else>
-      <p-toolbar2 :profile="profile" />
-    </v-layout>
     <v-content style="background-color: white">
-      <!-- <HelloWorld /> -->
       <router-view />
     </v-content>
 
@@ -29,8 +28,8 @@
 </template>
 
 <script>
+import PToolbarHome from "./components/PToolbarHome";
 import PToolbar from "./components/PToolbar";
-import PToolbar2 from "./components/PToolbar2";
 import PFooter from "./components/PFooter";
 import json_profile from "./assets/data/profile.json";
 
@@ -38,8 +37,8 @@ export default {
   name: "App",
 
   components: {
+    PToolbarHome,
     PToolbar,
-    PToolbar2,
     PFooter
   },
 

@@ -1,5 +1,5 @@
 <template>
-  <v-card class="container-pj" height="100%" @click="$router.push('/projects/' + project.name)">
+  <v-card class="container-pj" height="100%" @click="$router.push('/projects/#' + project.name)">
     <v-card flat color="transparent" class="align-stretch" width="100%">
       <v-layout wrap>
         <v-card-title style="width: 100%">

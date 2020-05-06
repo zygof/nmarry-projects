@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import TimelineItem from './TimelineItem.vue'
+import TimelineItem from './PTrainingItem.vue'
 
 export default {
   name: 'Timeline',
