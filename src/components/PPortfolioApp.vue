@@ -76,7 +76,6 @@ export default {
       return require("../assets/images/" + name);
     },
     statutColor(statut) {
-      console.log(statut);
       switch(statut){
         case 'EN COURS': return 'orange';
         case 'DÉPLOYÉE': return 'green';
