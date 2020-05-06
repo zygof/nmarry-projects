@@ -42,13 +42,13 @@
 </template>
 
 <script>
-import json_profile from "../assets/data/profile.json";
+import data_profile from "../assets/data/profile.json";
 
 export default {
   data() {
     return {
       title: "Mes projets",
-      profile: json_profile,
+      profile: data_profile,
       options: {
         duration: 300,
         offset: 0,

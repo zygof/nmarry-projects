@@ -83,12 +83,12 @@
 import PProject from "@/components/PProject.vue";
 import PContact from "@/components/PContact.vue";
 import PTraining from "@/components/Training.vue";
-import json_profile from "../assets/data/profile.json";
-import json_projects from "../assets/data/projects.json";
-import json_experiences from "../assets/data/experiences.json";
-import json_training from "../assets/data/training.json";
-import json_hobbies from "../assets/data/hobbies.json";
-import json_links from "../assets/data/links.json";
+import data_profile from "../assets/data/profile.json";
+import data_projects from "../assets/data/projects.json";
+import data_experiences from "../assets/data/experiences.json";
+import data_training from "../assets/data/training.json";
+import data_hobbies from "../assets/data/hobbies.json";
+import data_links from "../assets/data/links.json";
 
 export default {
   name: "home",
@@ -99,14 +99,25 @@ export default {
   },
   data() {
     return {
-      profile: json_profile,
-      projects: json_projects,
-      experiences: json_experiences,
-      training: json_training,
-      hobbies: json_hobbies,
-      links: json_links,
-      contactLinks: json_profile.contacts
+      profile: data_profile,
+      projects: data_projects,
+      experiences: data_experiences,
+      training: data_training,
+      hobbies: data_hobbies,
+      links: data_links,
+      contactLinks: data_profile.contacts
     };
   }
 };
 </script>
+
+<style>
+.theme--dark.v-input{
+color: black !important;
+}
+
+.v-application .primary--text{
+      color: black !important;
+    caret-color: black !important;
+}
+</style>

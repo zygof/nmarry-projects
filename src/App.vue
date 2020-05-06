@@ -31,7 +31,7 @@
 import PToolbarHome from "./components/PToolbarHome";
 import PToolbar from "./components/PToolbar";
 import PFooter from "./components/PFooter";
-import json_profile from "./assets/data/profile.json";
+import data_profile from "./assets/data/profile.json";
 
 export default {
   name: "App",
@@ -44,7 +44,7 @@ export default {
 
   data: () => ({
     fab: false,
-    profile: json_profile,
+    profile: data_profile,
     icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"]
   }),
   methods: {
