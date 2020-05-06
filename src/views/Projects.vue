@@ -144,14 +144,14 @@ export default {
       itemsPerPage: 4,
       sortBy: "name",
       keys: [
-        "Name",
-        "Calories",
-        "Fat",
-        "Carbs",
-        "Protein",
-        "Sodium",
-        "Calcium",
-        "Iron"
+        // "Name",
+        // "Calories",
+        // "Fat",
+        // "Carbs",
+        // "Protein",
+        // "Sodium",
+        // "Calcium",
+        // "Iron"
       ],
       items:[]
       // items: [
