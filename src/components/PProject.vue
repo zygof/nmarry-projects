@@ -16,16 +16,22 @@
             </v-card>
 
             <v-flex xs7 style="margin-left:5%">
-              <span>{{project.name}} <v-btn class="subtitle-2"  
-              style="font-size: 12px !important; padding:0% !important; min-width:0px; top:-10px" text>
-              {{project.type}}</v-btn></span>
-              
+              <span>
+                {{project.name}}
+                <v-btn
+                  class="subtitle-2"
+                  style="font-size: 12px !important; padding:0% !important; min-width:0px; top:-10px"
+                  text
+                >{{project.type}}</v-btn>
+              </span>
+
               <div>
                 <v-chip small pill :color="statutColor(project.statut)" dark>{{project.statut}}</v-chip>
               </div>
 
               <template v-for="(platform, i) in project.platforms">
                 <!-- <div> -->
+                <!-- {{sortedArray()}} -->
                 <v-btn :href="platform.link" target="_blank" icon :key="i">
                   <v-icon>{{platform.icon}}</v-icon>
                 </v-btn>
@@ -38,7 +44,7 @@
           <div>{{project.description}}</div>
           <div class="title mt-2 pt-2">Technologies utilisées</div>
           <v-layout>
-            <template v-for="(tech, i) in project.technologies">
+            <template v-for="(tech, i) in sortedArray(project.technologies)">
               <v-flex xs3 :key="i">
                 <div class="text-center">
                   <v-btn icon>
@@ -71,18 +77,38 @@ export default {
       }
     }
   },
+  computed: {
+    
+  },
   methods: {
     logo(name) {
       return require("../assets/images/" + name);
     },
     statutColor(statut) {
-      switch(statut){
-        case 'EN COURS': return 'orange';
-        case 'DÉPLOYÉE': return 'green';
-        case 'EN TEST': return 'yellow darken-1';
-        case 'TERMINÉE': return 'green lighten-2';
-        default: return 'dark'
+      switch (statut) {
+        case "EN COURS":
+          return "orange";
+        case "DÉPLOYÉE":
+          return "green";
+        case "EN TEST":
+          return "yellow darken-1";
+        case "TERMINÉE":
+          return "green lighten-2";
+        default:
+          return "dark";
       }
+    },
+    sortedArray(technologies) {
+      function compare(a, b) {
+        if (a.name < b.name)
+          return -1;
+        if (a.name > b.name)
+          return 1;
+        return 0;
+      }
+      // let arrayCopy = technologies.slice(0).sort(compare);
+      // return arrayCopy
+      return technologies.slice(0).sort(compare);
     }
   }
 };

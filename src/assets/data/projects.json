@@ -309,7 +309,7 @@
       "name": "GLPI Client",
       "statut": "EN TEST",
       "logo": "projet-default.png",
-      "type":"Professionel",
+      "type":"PRO",
       "platforms": [
         {
           "name": "desktop",
@@ -445,7 +445,7 @@
       "name": "Ball Balance",
       "statut": "TERMINÉE",
       "logo": "projet-default.png",
-      "type":"École (Lycée George Brassens)",
+      "type":"ÉCOLE",
       "platforms": [
         {
           "name": "Arduino",
