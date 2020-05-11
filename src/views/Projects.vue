@@ -6,7 +6,7 @@
           <div class="display-1 font-weight-bold">Mes projects</div>
         </v-flex>
         <v-flex xs12>
-          <v-container fluid>
+          <v-card fluid>
             <v-data-iterator
               :items="items"
               :items-per-page.sync="itemsPerPage"
@@ -64,7 +64,8 @@
                     cols="12"
                     sm="6"
                     md="6"
-                    lg="4"
+                    lg="3"
+                    style="padding: 0%;"
                   >
                     <v-layout justify-center>
                       <v-layout>
@@ -78,8 +79,8 @@
               </template>
 
               <template v-slot:footer>
-                <v-row class="mt-2" align="center" justify="center">
-                  <span class="grey--text">Projet par page</span>
+                <v-layout class="mt-4" align="center" justify-center>
+                  <!-- <span class="grey--text">Projet par page</span>
                   <v-menu offset-y>
                     <template v-slot:activator="{ on }">
                       <v-btn dark text class="ml-2" v-on="on">
@@ -96,21 +97,31 @@
                         <v-list-item-title>{{ number }}</v-list-item-title>
                       </v-list-item>
                     </v-list>
-                  </v-menu>
+                  </v-menu> -->
 
-                  <v-spacer></v-spacer>
+                  <!-- <v-spacer></v-spacer> -->
 
                   <span class="mr-4 grey--text">Page {{ page }} sur {{ numberOfPages }}</span>
-                  <v-btn fab dark class="mr-1" @click="formerPage">
+                  
+                  <v-btn-toggle mandatory>
+                      <v-btn large depressed  @click="formerPage">
+                        <v-icon>mdi-chevron-left</v-icon>
+                      </v-btn>
+                      <v-btn large depressed @click="nextPage">
+                        <v-icon>mdi-chevron-right</v-icon>
+                      </v-btn>
+                    </v-btn-toggle>
+                  
+                  <!-- <v-btn fab dark class="mr-1" @click="formerPage">
                     <v-icon>mdi-chevron-left</v-icon>
                   </v-btn>
                   <v-btn fab dark class="ml-1" @click="nextPage">
                     <v-icon>mdi-chevron-right</v-icon>
-                  </v-btn>
-                </v-row>
+                  </v-btn> -->
+                </v-layout>
               </template>
             </v-data-iterator>
-          </v-container>
+          </v-card>
         </v-flex>
       </v-layout>
     </v-container>
@@ -138,7 +149,7 @@ export default {
       filter: {},
       sortDesc: false,
       page: 1,
-      itemsPerPage: 6,
+      itemsPerPage: 8,
       sortBy: "name",
       keys: ["Name", "statut", "technologies", "type"],
       keysName: [""],
