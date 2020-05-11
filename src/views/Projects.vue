@@ -1,9 +1,9 @@
 <template>
   <div class="projects">
     <v-container class justify-center>
-      <v-layout wrap justify-center >
+      <v-layout wrap justify-center>
         <v-flex xs12>
-          <div class="display-1 font-weight-bold">Mes projects</div>
+          <div class="display-1 font-weight-bold mb-3">Mes projects</div>
         </v-flex>
         <v-flex xs12>
           <v-card fluid>
@@ -64,8 +64,9 @@
                     cols="12"
                     sm="6"
                     md="6"
-                    lg="3"
-                    style="padding: 0%;"
+                    lg="4"
+                    xl="3"
+                    style="padding: 5px;"
                   >
                     <v-layout justify-center>
                       <v-layout>
@@ -79,7 +80,11 @@
               </template>
 
               <template v-slot:footer>
-                <v-layout class="mt-4" align="center" justify-center>
+                <v-layout justify-center class="mt-4">
+                  <span class="mr-4 grey--text">Page {{ page }} sur {{ numberOfPages }}</span>
+                </v-layout>
+
+                <v-layout class="pb-4" align="center" justify-center>
                   <!-- <span class="grey--text">Projet par page</span>
                   <v-menu offset-y>
                     <template v-slot:activator="{ on }">
@@ -97,27 +102,25 @@
                         <v-list-item-title>{{ number }}</v-list-item-title>
                       </v-list-item>
                     </v-list>
-                  </v-menu> -->
+                  </v-menu>-->
 
                   <!-- <v-spacer></v-spacer> -->
 
-                  <span class="mr-4 grey--text">Page {{ page }} sur {{ numberOfPages }}</span>
-                  
                   <v-btn-toggle mandatory>
-                      <v-btn large depressed  @click="formerPage">
-                        <v-icon>mdi-chevron-left</v-icon>
-                      </v-btn>
-                      <v-btn large depressed @click="nextPage">
-                        <v-icon>mdi-chevron-right</v-icon>
-                      </v-btn>
-                    </v-btn-toggle>
-                  
+                    <v-btn large primary depressed @click="formerPage">
+                      <v-icon>mdi-chevron-left</v-icon>
+                    </v-btn>
+                    <v-btn large primary depressed @click="nextPage">
+                      <v-icon>mdi-chevron-right</v-icon>
+                    </v-btn>
+                  </v-btn-toggle>
+
                   <!-- <v-btn fab dark class="mr-1" @click="formerPage">
                     <v-icon>mdi-chevron-left</v-icon>
                   </v-btn>
                   <v-btn fab dark class="ml-1" @click="nextPage">
                     <v-icon>mdi-chevron-right</v-icon>
-                  </v-btn> -->
+                  </v-btn>-->
                 </v-layout>
               </template>
             </v-data-iterator>
@@ -151,7 +154,7 @@ export default {
       page: 1,
       itemsPerPage: 8,
       sortBy: "name",
-      keys: ["Name", "statut", "technologies", "type"],
+      keys: ["Name", "statut", "type"],
       keysName: [""],
       items: data_projects.data
     };
@@ -163,15 +166,41 @@ export default {
     filteredKeys() {
       return this.keys.filter(key => key !== `Name`);
     },
-    keyName(){
+    keyName() {
       // let keyName = [],
       // switch(this.keys){
       //   // case 'Name'
       // }
-      return 0
+      return 0;
+    }
+  },
+  created() {
+    window.addEventListener("resize", this.myEventHandler);
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.myEventHandler);
+  },
+  watch: {
+    windowHeight(newHeight, oldHeight) {
+      console.log(oldHeight);
+      newHeight;
     }
   },
   methods: {
+    myEventHandler(e) {
+      console.log(e.target.innerWidth);
+      this.numberOfPages;
+      if (e.target.innerWidth > 1903) {
+        this.itemsPerPage = 8;
+      }
+      if (e.target.innerWidth < 1904 && e.target.innerWidth > 1263) {
+        this.itemsPerPage = 6;
+      }
+      if (e.target.innerWidth < 1264 && e.target.innerWidth > 600) {
+        this.itemsPerPage = 4;
+      }
+      console.log(this.itemsPerPage);
+    },
     displayData(item, key) {
       var data;
       if (key == "technologies") {

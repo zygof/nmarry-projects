@@ -1,6 +1,6 @@
 <template>
-  <v-card class="container-pj" height="100%" @click="$router.push('/projects/#' + project.name)">
-    <v-card flat color="transparent" class="align-stretch" width="100%">
+  <v-card class="container-pj" style="height:100%" @click="$router.push('/projects/#' + project.name)">
+    <v-card flat color="transparent" class="align-stretch" width="100%" height="100%">
       <v-layout wrap>
         <v-card-title style="width: 100%;">
           <v-layout>
@@ -40,7 +40,7 @@
             </v-flex>
           </v-layout>
         </v-card-title>
-        <v-card-text>
+        <v-card-text class="pb-0">
           <div>{{project.description}}</div>
           <div class="title mt-2 pt-2">Technologies utilisées</div>
           <v-layout>
