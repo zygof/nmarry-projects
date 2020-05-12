@@ -119,9 +119,7 @@ export default {
   box-shadow: none;
   margin: 2%;
 }
-.container-pj:hover {
-  /* background-color: #e0e0e0; */
-}
+
 .no-flex {
   flex: 0 0;
 }
