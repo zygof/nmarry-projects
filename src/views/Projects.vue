@@ -154,8 +154,8 @@ export default {
       page: 1,
       itemsPerPage: 8,
       sortBy: "name",
-      keys: ["Name", "statut", "type"],
-      keysName: [""],
+      keys: ["Name", "Statut", "Type"],
+      keysName: ["Nom", "Statut", "Type"],
       items: data_projects.data
     };
   },
@@ -182,14 +182,15 @@ export default {
   },
   watch: {
     windowHeight(newHeight, oldHeight) {
-      console.log(oldHeight);
+      // console.log(oldHeight);
+      console.log("Taille : " + screen.size);
+      oldHeight
       newHeight;
     }
   },
   methods: {
     myEventHandler(e) {
-      console.log(e.target.innerWidth);
-      this.numberOfPages;
+      console.log("Taille : " + screen.width);
       if (e.target.innerWidth > 1903) {
         this.itemsPerPage = 8;
       }
@@ -199,7 +200,6 @@ export default {
       if (e.target.innerWidth < 1264 && e.target.innerWidth > 600) {
         this.itemsPerPage = 4;
       }
-      console.log(this.itemsPerPage);
     },
     displayData(item, key) {
       var data;
