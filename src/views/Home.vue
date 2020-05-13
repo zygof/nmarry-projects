@@ -25,22 +25,30 @@
         <v-flex xs12>
           <div class="display-1 font-weight-bold" id="about">À propos</div>
         </v-flex>
-        <v-flex xs12 mt-5>
-          <div class="body-1">{{profile.aboutText}}</div>
-          <div class="body-1 mt-3">{{profile.aboutText2}}</div>
+        <v-flex class="body-1" xs12 mt-5>
+          <div class="mb-2 font-weight-bold">Développeur ? Pourquoi ?</div>
+          <div>{{profile.aboutTextWhy}}</div>
+
+          <div class="mt-3 mb-2 font-weight-bold">Pourquoi moi ?</div>
+          <div>{{profile.aboutTextWhyMe}}</div>
+
+          <div class="mt-3 mb-2 font-weight-bold">Le futur ?</div>
+            <div>{{profile.aboutTextFutur}}</div>
         </v-flex>
       </v-layout>
 
-      <v-layout wrap my-5>
+      <v-layout justify-center wrap my-5>
         <v-flex xs12>
           <div class="display-1 font-weight-bold" id="training">Formations</div>
         </v-flex>
-        <v-flex class="mt-5">
-          <p-training
-            :timeline-items="training.data"
-            :message-when-no-items="training.messageWhenNoItems"
-          />
-        </v-flex>
+        <v-row class="mt-5">
+          <v-col>
+            <p-training
+              :timeline-items="training.data"
+              :message-when-no-items="training.messageWhenNoItems"
+            />
+          </v-col>
+        </v-row>
       </v-layout>
 
       <v-layout wrap my-5 justify-center>
@@ -48,18 +56,20 @@
           <div class="display-1 font-weight-bold" id="projects">Mes projets</div>
         </v-flex>
         <v-card xs12 class="mt-5" elevation="7">
-
           <v-layout wrap justify-center style="max-width:1160px">
-            <template v-for="(project, i) in projects.data" >
+            <template v-for="(project, i) in projects.data">
               <v-flex :key="i" xs12 sm6 md4 v-if="i < 6">
-                <p-project :project="project"/>
+                <p-project :project="project" />
               </v-flex>
             </template>
           </v-layout>
 
           <v-card-actions class="text-right">
             <v-spacer></v-spacer>
-            <v-btn dark large style="margin-top:1%" width="100%" @click="$router.push('/projects')">Voir plus (<span>{{Object.keys(projects.data).length}}</span>)...</v-btn>
+            <v-btn dark large style="margin-top:1%" width="100%" @click="$router.push('/projects')">
+              Voir plus (
+              <span>{{Object.keys(projects.data).length}}</span>)...
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-layout>
@@ -112,12 +122,12 @@ export default {
 </script>
 
 <style>
-.theme--dark.v-input{
-color: black !important;
+.theme--dark.v-input {
+  color: black !important;
 }
 
-.v-application .primary--text{
-      color: black !important;
-    caret-color: black !important;
+.v-application .primary--text {
+  color: black !important;
+  caret-color: black !important;
 }
 </style>

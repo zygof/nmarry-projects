@@ -4,13 +4,15 @@
     "birthday_d":"31",
     "birthday_m":"07",
     "birthday_y":"1997",
-    "job":"Concepteur développeur d'application",
+    "job":"Concepteur développeur d'application (Full Stack, Mobile)",
     "location":"France, île de la Réunion",
     "flag":"../assets/pictures/france.jpg",
     "picture":"",
-    "aboutText":
-    "Se réveiller chaque matin pour développer mon sens artistique est ce qui me met le plus en joie. Rendre un travail bien fait et voir la satistaction du client est d'autant plus gratifiant.",
-    "aboutText2":
+    "aboutTextWhy":
+    "Se réveiller chaque matin pour développer mon sens artistique est ce qui me met le plus en joie. Motivé par la satistaction du client et par le travail bien fait, je mettrai toute en oeuvre pour atteindre mes objectifs.",
+    "aboutTextWhyMe":
+    "Faites-moi confiance et je participerai à la croissance de l'entreprise et je saurai intégrer votre équipe d'experts. Je suis une personne engagée, passionnée par les nouvelles technologies.",
+    "aboutTextFutur":
     "Mon plus grand bonheur serait de mettre tout mon expertise au profit de mon île la Réunion 😌😌",
     "contacts":[
         {

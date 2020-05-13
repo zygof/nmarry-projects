@@ -31,7 +31,7 @@
 export default {
   data() {
     return {
-      url: "CV_NM.pdf"
+      url: "/CV_NM.pdf"
     };
   },
 
