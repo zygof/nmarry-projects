@@ -28,28 +28,10 @@
             "icon": "mdi-linkedin"
           },
           {
-            "name": "YouTube",
-            "value": "Zygof Prod",
-            "link": "https://www.youtube.com/channel/UCNWxVewsjH97hXFFIYHlJJA",
-            "icon": "mdi-youtube"
-          },
-          {
             "name": "Github",
             "value": "zygof",
             "link": "https://github.com/zygof/",
             "icon": "mdi-github"
-          },
-          {
-            "name": "Facebook",
-            "value": "Nicolas MARRY",
-            "link": "https://www.facebook.com/nikos.alewe1",
-            "icon": "mdi-facebook"
-          },
-          {
-            "name": "Instagram",
-            "value": "@zygof_",
-            "link": "https://www.instagram.com/zygof_/",
-            "icon": "mdi-instagram"
           }
     ]
 }
