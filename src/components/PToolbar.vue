@@ -9,7 +9,7 @@
               style="cursor: pointer"
               class="no-shadow display-1 font-weight-bold"
               @click="$router.push('/')"
-            >NM P.</v-toolbar-title>
+            >NM</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-sm-and-down" v-for="item in items" :key="item.title">
               <v-btn :href="item.link" text>{{item.title}}</v-btn>

@@ -8,8 +8,8 @@
       >
         <div class="section-year">
           <span v-if="hasFromYear(timelineContent)" class="year">
+            <span v-if="hasToYear(timelineContent)" class="yearTo">{{getToYear(timelineContent)}}</span>
             {{ getFromYear(timelineContent) }}
-            <span v-if="hasToYear(timelineContent)" class="yearTo"> - {{getToYear(timelineContent)}}</span>
           </span>
         </div>
         <TimelineItem
@@ -168,7 +168,7 @@ export default {
         text-align: right;
       }
       .yearTo{
-        margin-right: 10px;
+        margin-right: 0px;
       }
     }
     &.unique-timeline {

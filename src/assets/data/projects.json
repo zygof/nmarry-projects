@@ -1,6 +1,160 @@
 {
   "data": [
     {
+      "name": "ISIS Diabète",
+      "statut": "EN COURS",
+      "logo": "projet-default.png",
+      "type":"PRO",
+      "platforms": [
+        {
+          "name": "web",
+          "icon": "mdi-web",
+          "link": ""
+        }
+      ],
+      "description": "Gestion prescriptions des appareils médicaux destinés aux patients atteints du diabète.",
+      "synopsis": "",
+      "technologies": [
+        {
+          "name": "React",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "Express JS",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "MongoDB",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "pictures": [
+        {
+          "title": "",
+          "text": "",
+          "link": ""
+        }
+      ],
+      "code": {
+        "name": "github",
+        "icon": "mdi-github",
+        "link": ""
+      }
+    },
+    {
+      "name": "Influx",
+      "statut": "EN COURS",
+      "logo": "projet-default.png",
+      "type":"ÉCOLE",
+      "platforms": [
+        {
+          "name": "Android",
+          "icon": "mdi-android",
+          "link": ""
+        },
+        {
+          "name": "apple",
+          "icon": "mdi-apple",
+          "link": ""
+        }
+      ],
+      "description": "Application de rencontre entre des micro-influenceurs et entreprises. L'entreprise se fait connaître de tous par le biai d'influenceur en échange d'une contre partie.",
+      "synopsis": "",
+      "technologies": [
+        {
+          "name": "React Native",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "Firebase",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "MongoDB",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "Express JS",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "pictures": [
+        {
+          "title": "",
+          "text": "",
+          "link": ""
+        }
+      ],
+      "code": {
+        "name": "github",
+        "icon": "mdi-github",
+        "link": ""
+      }
+    },
+
+    {
+      "name": "OUTTA Project",
+      "statut": "TERMINÉE",
+      "logo": "projet-default.png",
+      "type":"PERSO",
+      "platforms": [
+        {
+          "name": "Android",
+          "icon": "mdi-android",
+          "link": ""
+        },
+        {
+          "name": "apple",
+          "icon": "mdi-apple",
+          "link": ""
+        }
+      ],
+      "description": "Application listant les reductions proposées par des restaurants à proximités pour la consommation sur place. Le but est de dynamisé le traffic client durant la periode post-confinement.",
+      "synopsis": "",
+      "technologies": [
+        {
+          "name": "React Native",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "Firebase",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "MongoDB",
+          "icon": "mdi-cog",
+          "link": ""
+        },
+        {
+          "name": "Express JS",
+          "icon": "mdi-cog",
+          "link": ""
+        }
+      ],
+      "pictures": [
+        {
+          "title": "",
+          "text": "",
+          "link": ""
+        }
+      ],
+      "code": {
+        "name": "github",
+        "icon": "mdi-github",
+        "link": ""
+      }
+    },
+    
+    {
       "name": "MySeance",
       "statut": "EN COURS",
       "logo": "projet-default.png",
